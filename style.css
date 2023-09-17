@@ -1,0 +1,157 @@
+ /* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ a{
+  text-decoration: none;
+  color: #FFF;
+ }
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+ 
+ body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #FFF;
+ }
+ .header{
+  background-color: #142257;
+ width: 100%;
+ position: fixed;
+ z-index: 50;
+
+ }
+.header_wrap{
+  font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.33;
+  padding: 24px 10px;
+max-width: 1600px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.nav_menu{
+  display: flex;
+  gap: 2.71vw ;
+  
+ list-style: none;
+ transition: transform 0.5s; 
+}
+.nav_ref:hover{
+  opacity: 25%;
+}
+.services_time::before{ 
+  border-radius: 50%;
+  background-color: #FF5E5E;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  content: "";
+  margin-right: 10px;
+}
+.header__burger-btn{
+  display: none;
+ width: 24px;
+ height: 24px;
+ padding: auto;
+ position: relative;
+ z-index:2;
+ left: -14px;
+ overflow: hidden;
+}
+.header__burger-btn:hover{
+ filter: brightness(0.7);
+  cursor: pointer;
+}
+body.menu-open {
+  overflow: hidden;
+}
+
+.header__burger-btn span{
+  height: 2px;
+  width: 24px;
+  top: 50%;
+	left: 50%;
+  border-radius: 1px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+background-color: #FFF;
+}
+.header__burger-btn span:nth-of-type(2) {
+  top: calc(50% - 7px);
+}
+.header__burger-btn span:nth-of-type(3) {
+  top: calc(50% + 7px);
+}.header__burger-btn.active span:nth-of-type(1) {
+  display: none;
+}.header__burger-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+.header__burger-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
+.menu{
+  display: flex;
+justify-content: center;
+}
+@media (max-width:780px){
+  .header__burger-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+  right: 0;
+  top: 0;
+
+   min-width: 274px;
+    height: 100vh;
+    background:  #02123d;
+    transition: transform 0.5s ease-in-out;
+  transform: translateX(100%); /* Начальное смещение вправо */
+  overflow: hidden;
+  }
+  .menu.active {
+  
+    transform: translateX(0);
+  }
+  .nav_menu{
+    flex-direction: column;
+ gap: 64px;
+  }
+  .services_time{
+    display: none;
+  }
+
+}
+
