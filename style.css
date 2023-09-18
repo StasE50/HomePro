@@ -86,9 +86,10 @@ align-items: center;
  height: 24px;
  padding: auto;
  position: relative;
- z-index:2;
+ z-index:12;
  left: -14px;
  overflow: hidden;
+ z-index: 12;
 }
 .header__burger-btn:hover{
  filter: brightness(0.7);

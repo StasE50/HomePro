@@ -14,12 +14,13 @@ overlay.addEventListener('click',()=>{
   menu.classList.toggle('active');
   burgerBtn.classList.toggle('active');
 overlay.classList.toggle('active');
+document.body.classList.toggle('menu-open');
 });
 links.forEach(function(link) {
   link.addEventListener('click', function() {
-    menu.classList.remove('active'); // Закрываем меню
-    burgerBtn.classList.remove('active'); // Меняем состояние бургера
-    document.body.classList.remove('menu-open');
+    menu.classList.toggle('active'); // Закрываем меню
+    burgerBtn.classList.toggle('active'); // Меняем состояние бургера
+    document.body.classList.toggle('menu-open');
   });
 });
 
