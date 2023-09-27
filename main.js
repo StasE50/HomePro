@@ -27,7 +27,6 @@ menu.classList.toggle('active'); // Закрываем меню
     burgerBtn.classList.toggle('active'); // Меняем состояние бургера
     document.body.classList.toggle('menu-open');
    }
-  
     
   });
 });
