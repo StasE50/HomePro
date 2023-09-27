@@ -31,10 +31,10 @@ dd {
   color: #FFF;
  }
  
- @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
- 
+ @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
  body{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans',sans-serif;;
     color: #FFF;
     background-color:#FFF;
  }
@@ -141,22 +141,31 @@ height: 977px;
 position: relative;
 }
 .content_bottom-header::before{
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="482" height="45" viewBox="0 0 482 45" fill="none"><path d="M436.42 5.87463C432.055 2.086 426.469 1.52588e-05 420.689 1.52588e-05H0L0 45H481.5L436.42 5.87463Z" fill="white"/></svg>');
-position: absolute;
+content: "";
+background-image: url('img/botomImgLeft.png');
+  position: absolute;
+width: 26.2vw;
+height: 45px;
 left: 0px;
+background-size: cover;
 bottom: -5px;
+background-position: right; 
 }
 .content_bottom-header::after{
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="484" height="45" viewBox="0 0 484 45" fill="none"><path d="M45.0801 5.87458C49.4453 2.08596 55.0312 -2.6145e-05 60.8113 -2.56397e-05L485 1.52588e-05L485 45L0 45L45.0801 5.87458Z" fill="white"/></svg>');
-position: absolute;
+  content: "";
+  background-image: url('img/botomImgRight.png');
+    position: absolute;
+  width: 26.2vw;
+  height: 45px;
 right: 0px;
 bottom: -5px;
+background-size: cover;
 }
 .image-container {
   position: relative;
   display: inline-block;
   height: 836px;
-
+  width: 413px;
 }
 .lefr_overlay-svg{
   position: absolute;
@@ -167,6 +176,7 @@ bottom: -5px;
   position: absolute;
   top: -80px;
   right: -16px;
+
 }
 
 .improv_container{
@@ -359,7 +369,123 @@ align-items: center;
  height: 48px;
  margin-right:  16px;
 }
+@media (max-width:1716px) {
+  .left_image{
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+  .lefr_overlay-svg svg{
+    width: 366px;
+    height: 1049px;
+    padding-top: 80px;
+  }
+  .right_img{
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+  .right_overlay-svg svg{
+    width: 366px;
+    height: 1055px;
+    padding-top: 80px;
+  }
+}
 
+@media (max-width:1561px) {
+  .left_image{
+    width: 312px;
+    height: 100%;
+  }
+  .lefr_overlay-svg svg{
+    width: 328px;
+    height: 1130px;
+  }
+  .right_img{
+    width: 312px;
+    height: 100%;
+  }
+  .right_overlay-svg svg{
+    width: 328px;
+    height: 1135px;
+  }
+  .conteiner_for-lelement{
+    flex-wrap: wrap;
+    margin-top: 138px;
+    max-width: 100%;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.improv_title {
+  font-size: 44px;
+}
+.ikon_with-text{
+  width: 185px;
+}
+  }
+  @media (max-width:1129px) {
+    .left_image{
+      width: 264px;
+    }
+    .lefr_overlay-svg svg{
+      width: 281px;
+      height: 1152px;
+    }
+    .right_img{
+      width: 264px;
+    }
+    .right_overlay-svg svg{
+      width: 281px;
+    height: 1154px;
+    }
+  .improv_title {
+    font-size: 44px;
+  }
+  .ikon_with-text{
+    width: 185px;
+  }
+  .repairs_content{
+    font-size: 16px;
+  }
+    }
+    @media (max-width:1024px) {
+      .left_image{
+        width: 220px;
+      }
+      .lefr_overlay-svg svg{
+        width: 235px;
+        height: 1249px;
+      }
+      .right_img{
+        width: 220px;
+      }
+      .right_overlay-svg svg{
+    width: 240px;
+    height: 1245px;
+      }
+    }
+    @media (max-width:928px) {
+      .image-container{
+        display: none;
+      }
+.repairs_content{
+  font-size: 20px;
+}
+.improv_title {
+  font-size: 64px;
+}
+.content_with-checkmark{
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+.conteiner_for-lelement {
+  margin-top: 120px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+    }
 @media (max-width:780px){
   .header__burger-btn{
     display: block;
@@ -367,7 +493,6 @@ align-items: center;
   .header_wrap{
     padding: 12px 10px;
   }
-
   .menu{
     position: fixed;
   right: 0;
@@ -382,7 +507,6 @@ align-items: center;
 }
   .menu.active {
     transform: translateX(0);
-  
   }
   .logo{
     position: absolute;
@@ -395,19 +519,114 @@ align-items: center;
  position:absolute;
  top: 80px;
  left: 99px;
-
   }
 .services_time{
   position: absolute;
   left: 19px;
   bottom:45px ;
+}
+.repairs_content  {
+  font-size: 16px;
+}
+.improv_title {
+  font-size: 43px;
+  margin-bottom: 0;
+}
+.content_with-checkmark{
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.improv_container{
+  justify-content: start;
+}
+.ikon_with-text {
+  height: 100%;
+max-width:  100%;
+width: 50%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.conteiner_for-lelement{
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0;
+  gap: 0;
+  justify-content: center;
+}
+.ikon {
+  margin: 0 0 10px 0 ;
+}
+}
+@media (max-width:442px){
+  .repairs_content{
+    font-size: 14px;
+  }
+  .improv_title{
+    font-size: 32px;}
+  .content_with-checkmark{
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 24px 0;
+    gap: 24px;
+  }
+  .content_improv-container{
+    padding: 0;
+  }
+  .content_with-checkmark span:before{
+    content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M20.5 6L9.5 17L4.5 12' stroke='%2315B2F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    transform: translateY(4px);
+  }
+  .call_btn{
+    width: 175px;
+    height: 48px;
+    gap: 8px;
+  }
+  .call_ref{
+       font-size: 18px
+  }
+  .content_bottom-header{
+    height: 680px;
+  }
+  .phone{
+    width: 26px;
+    height: 26px;
+  }
+  .phone svg{
+    width: 16px;
+height: 16px;
+  }
+  .conteiner_for-lelement{
+    padding-top: 39px;
+  }
+  .ikon_with-text{
+    font-size: 14px;
+    justify-content: start;
+    height: 130px;
+  }
+  .content_bottom-header::after{
+    height: 31px;
+  }
+  .content_bottom-header::before{
+    height: 31px;
+  }
+  .repairs_content samp:nth-child(-n+2)::after{
+    margin: 0 8px;
+  }
+  .ikon{
+    width: 32px;
+    height: 32px;
+  }
+  .ikon svg{
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width:338px){
  
+  .content_bottom-header{
+    padding: 87px 5px 0 5px;
+    height: 780px
+  }
 }
-}
-@media (min-width:780px){
-.logo1{
-  display: none;
-}
-
-}
-

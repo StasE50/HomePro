@@ -27,8 +27,21 @@ menu.classList.toggle('active'); // Закрываем меню
     burgerBtn.classList.toggle('active'); // Меняем состояние бургера
     document.body.classList.toggle('menu-open');
    }
-    
   });
 });
+var element = document.querySelector('.logo1');
+// Функция, которая будет проверять ширину экрана и скрывать элемент при необходимости
+function hideElementOnResize() {
+  if (window.innerWidth > 780) { // Если ширина экрана менее или равна 780 пикселей
+    element.style.display = 'none';
+  }
+  else{
+    element.style.display = 'block';
+  } 
+  
+}
+hideElementOnResize();
 
+// Добавляем обработчик события изменения размера окна браузера
+window.addEventListener("resize", hideElementOnResize);
 // Обработчик события клика на кресте
