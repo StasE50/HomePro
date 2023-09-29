@@ -32,6 +32,9 @@ dd {
  }
  
  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+ html {
+  scroll-behavior: smooth;
+}
 
  body{
     font-family: 'Plus Jakarta Sans',sans-serif;;
@@ -85,6 +88,10 @@ right: 24px;
  filter: brightness(0.7);
   cursor: pointer;
 }
+.call_btn :hover{
+  filter: brightness(0.7);
+   cursor: pointer;
+ }
 body.menu-open {
   overflow: hidden;
 }
@@ -349,7 +356,7 @@ justify-content: center;
 align-items: center;
 display: flex; 
 gap: 2.71vw;
-margin-top: 250px;
+margin-top: 170px;
 }
 .ikon_with-text{
 color: var(--neutural-white, #FFF);
@@ -378,7 +385,7 @@ align-items: center;
   }
   .lefr_overlay-svg svg{
     width: 366px;
-    height: 1049px;
+    height: 969px;
     padding-top: 80px;
   }
   .right_img{
@@ -389,7 +396,7 @@ align-items: center;
   }
   .right_overlay-svg svg{
     width: 366px;
-    height: 1055px;
+    height: 975px;
     padding-top: 80px;
   }
 }
@@ -401,7 +408,7 @@ align-items: center;
   }
   .lefr_overlay-svg svg{
     width: 328px;
-    height: 1130px;
+    height: 1050px;
   }
   .right_img{
     width: 312px;
@@ -409,7 +416,7 @@ align-items: center;
   }
   .right_overlay-svg svg{
     width: 328px;
-    height: 1135px;
+    height: 1055px;
   }
   .conteiner_for-lelement{
     flex-wrap: wrap;
@@ -421,9 +428,26 @@ align-items: center;
 .improv_title {
   font-size: 44px;
 }
-.ikon_with-text{
-  width: 185px;
-}
+  }
+  @media (max-width:1479px) {
+
+    .ikon_with-text {
+      width: 250px;
+      justify-content: start;
+    }
+    .ikon_with-text:nth-of-type(1) {
+      justify-content: end;
+    }
+    .ikon_with-text:nth-of-type(3) {
+      justify-content: end;
+    }
+  }
+  @media (max-width:1226px) {
+
+    .ikon_with-text {
+      width: 200px;
+      justify-content: start;
+    }
   }
   @media (max-width:1129px) {
     .left_image{
@@ -462,7 +486,7 @@ align-items: center;
         width: 220px;
       }
       .right_overlay-svg svg{
-    width: 240px;
+    width: 242px;
     height: 1245px;
       }
     }
@@ -522,8 +546,8 @@ align-items: center;
   }
 .services_time{
   position: absolute;
-  left: 19px;
-  bottom:45px ;
+  left: 50px;
+    bottom: 75px;
 }
 .repairs_content  {
   font-size: 16px;
@@ -546,7 +570,7 @@ width: 50%;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: end;
 }
 .conteiner_for-lelement{
   width: 100%;
@@ -562,6 +586,12 @@ width: 50%;
 @media (max-width:442px){
   .repairs_content{
     font-size: 14px;
+  }
+  .ikon_with-text:nth-of-type(1) {
+    justify-content: start;
+  }
+  .ikon_with-text:nth-of-type(3) {
+    justify-content: start;
   }
   .improv_title{
     font-size: 32px;}

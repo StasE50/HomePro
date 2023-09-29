@@ -41,7 +41,9 @@ function hideElementOnResize() {
   
 }
 hideElementOnResize();
-
 // Добавляем обработчик события изменения размера окна браузера
 window.addEventListener("resize", hideElementOnResize);
 // Обработчик события клика на кресте
+document.querySelector(".call_btn").addEventListener("click", function() {
+  window.location.href = "tel:+380977149897";
+});
