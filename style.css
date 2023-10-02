@@ -96,11 +96,14 @@ right: 24px;
  z-index:12;
  overflow: hidden;
 }
-.header__burger-btn:hover{
+.header__burger-btn :hover{
  filter: brightness(0.7);
   cursor: pointer;
+}.aboutus-discription__conteiner__namber :hover{
+  filter: brightness(0.7);
+  cursor: pointer;
 }
-.call_btn,.aboutus-discription__conteiner__namber :hover{
+.call_btn:hover{
   filter: brightness(0.7);
    cursor: pointer;
  }
