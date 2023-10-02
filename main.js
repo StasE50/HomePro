@@ -38,7 +38,6 @@ function hideElementOnResize() {
   else{
     element.style.display = 'block';
   } 
-  
 }
 hideElementOnResize();
 // Добавляем обработчик события изменения размера окна браузера

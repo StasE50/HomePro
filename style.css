@@ -30,16 +30,24 @@ dd {
   text-decoration: none;
   color: #FFF;
  }
- 
+
  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
  html {
   scroll-behavior: smooth;
-}
 
+}
+html {
+  font-family: 'Plus Jakarta Sans',sans-serif;;
+
+}
  body{
     font-family: 'Plus Jakarta Sans',sans-serif;;
-    color: #FFF;
-    background-color:#FFF;
+    color: var(--neutural-grey-1, #545971);
+    font-feature-settings: 'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
  }
  .header{
   background-color: #142257;
@@ -62,8 +70,12 @@ margin: 0 auto;
  list-style: none;
  transition: transform 0.5s; 
 }
+
 .nav_ref:hover{
   opacity: 25%;
+}
+.services_time{
+ color: #FFF;
 }
 .services_time::before{ 
   border-radius: 50%;
@@ -88,10 +100,11 @@ right: 24px;
  filter: brightness(0.7);
   cursor: pointer;
 }
-.call_btn :hover{
+.call_btn,.aboutus-discription__conteiner__namber :hover{
   filter: brightness(0.7);
    cursor: pointer;
  }
+ 
 body.menu-open {
   overflow: hidden;
 }
@@ -367,15 +380,79 @@ line-height: 24px; /* 133.333% */
 display: flex;
 }
 .ikon{
-  display: inline-flex;
+display: inline-flex;
 justify-content: center;
 align-items: center;  
-  border-radius: 100%;
-  background-color: #1F3584;
+border-radius: 100%;
+background-color: #1F3584;
  width: 48px;
  height: 48px;
  margin-right:  16px;
 }
+
+/* end hedr + section 1   cont 1432 */
+
+.aboutus-wrap{
+ display: flex;
+ max-width: 1480px;
+ gap:clamp(32px,5% ,139px );
+margin: 0 auto;
+align-items: center;
+justify-content: space-between;
+padding-top:  clamp(60px,10% ,123px );
+padding-left: 24px;
+padding-right: 24px;
+}
+.aboutus__conteiner__img{
+  max-width: 100%;
+  min-width: 327px;
+  min-height: 321px;
+object-fit: cover;
+}
+.aboutus-discription{
+  max-width:  clamp(328px,45%,581px)  ;
+}
+.aboutus-discription__title{
+  color: #171921;
+  font-size: clamp(24px,4vw ,52px);
+  font-style: normal;
+font-weight: 700;
+line-height:clamp(32px,5vw ,64px);
+margin-bottom: 24px;
+}
+.aboutus-discription__skills{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-column-gap: clamp(0px,2%,57px);
+grid-row-gap: clamp(24px,7%,32px);
+margin:clamp(32px,4%,56px)  0;
+}
+.aboutus-discription__skills__skill{
+color: var(--primary-dark-blue-2, #1F3584);
+font-feature-settings: 'liga' off;
+font-size: clamp(16px,2.7vw ,20px);
+font-style: normal;
+font-weight: 700;
+line-height: 28px; /* 140% */
+}
+.aboutus-discription__skills__skill::before{
+
+  content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M20.5 6L9.5 17L4.5 12' stroke='%2315B2F5' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  display: inline-block;
+  transform: translateY(0.1em);
+  padding-right: 12px;
+
+}
+.aboutus-discription__conteiner{
+  max-width: 450px;
+  border-radius: 24px;
+  color:  #FFF;
+background: var(--primary-sky-blue, #15B2F5);
+text-align: center;
+padding: 12px 32px;
+min-height: 80px;
+}
+
 @media (max-width:1716px) {
   .left_image{
     width: 350px;
@@ -400,7 +477,6 @@ align-items: center;
     padding-top: 80px;
   }
 }
-
 @media (max-width:1561px) {
   .left_image{
     width: 312px;
@@ -447,7 +523,33 @@ align-items: center;
     .ikon_with-text {
       width: 200px;
       justify-content: start;
-    }
+    }  .aboutus-wrap{
+flex-direction: column;
+justify-content: center;
+text-align: center;
+  }
+  .aboutus__conteiner{
+    order: 1;
+   
+  }
+  .aboutus-discription{
+    order: 2;
+
+    max-width: clamp(328px,100%,881px);
+  }
+  .aboutus-discription__skills{
+  text-align: start;
+
+  }
+  .aboutus-discription__skills__skill{
+    padding-left: clamp(0px,11%,100px)
+  }
+  .aboutus-discription__skills>div:nth-child(odd){
+    padding-left: clamp(0px,14vw,170px);
+  }
+  .aboutus-discription__conteiner{
+    margin: 0 auto;
+  }
   }
   @media (max-width:1129px) {
     .left_image{
@@ -473,6 +575,7 @@ align-items: center;
   .repairs_content{
     font-size: 16px;
   }
+
     }
     @media (max-width:1024px) {
       .left_image{
@@ -508,6 +611,9 @@ align-items: center;
   margin-top: 120px;
   flex-wrap: nowrap;
   justify-content: center;
+}
+.aboutus-discription__skills>div:nth-child(odd){
+  padding-left:90px
 }
     }
 @media (max-width:780px){
@@ -582,6 +688,23 @@ width: 50%;
 .ikon {
   margin: 0 0 10px 0 ;
 }
+.aboutus-discription__skills>div:nth-child(odd){
+  padding-left:0px
+}
+.aboutus-discription__conteiner{
+  padding: 12px 24px;
+}
+}
+@media (max-width:505px){
+  .aboutus-discription__skills{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .aboutus-discription__skills__skill{
+    padding-left:0px
+  }
+  .aboutus-discription{
+ text-align: start;
+  }
 }
 @media (max-width:442px){
   .repairs_content{
