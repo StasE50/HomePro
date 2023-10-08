@@ -46,3 +46,7 @@ window.addEventListener("resize", hideElementOnResize);
 document.querySelector(".call_btn").addEventListener("click", function() {
   window.location.href = "tel:+380977149897";
 });
+document.querySelector(".call-us-now").addEventListener("click", function() {
+  window.location.href = "tel:+380977149897";
+});
+AOS.init();

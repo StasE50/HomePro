@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" value="notranslate">
-    <link rel="stylesheet" href="style.css"/> 
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>HomePage</title>
     
@@ -22,7 +23,7 @@
   <div class="logo"><a href="#home"><img src="img/Logo.png" srcset="img/logox2.png 2x, img/logox4.png 4x"  alt="z"></a></div>
 <ul class="nav_menu">
     <li class="nav_menu-item"><a   class="nav_ref" href="#section-aboutus">About Us</a></li>
-    <li class="nav_menu-item"><a class="nav_ref"  href="#">Services</a></li>
+    <li class="nav_menu-item"><a class="nav_ref"  href="#section-ourservice">Services</a></li>
     <li class="nav_menu-item"><a  class="nav_ref" href="#">Our Blog</a></li>
     <li class="nav_menu-item"><a class="nav_ref" href="#">Contact</a></li>  
 </ul>
@@ -34,7 +35,7 @@
   <main>
     <section id="home">
     <div class="content_bottom-header">
-      <div class="image-container">
+      <div data-aos="fade-right"  data-aos-duration="1500"  class="image-container">
           <img  src="img/leftImg.png" class="left_image" alt="">
             <div class="lefr_overlay-svg">
               <svg xmlns="http://www.w3.org/2000/svg" width="428" height="916" viewBox="0 0 428 916" fill="none">
@@ -93,7 +94,7 @@
   </div>
   
 </div>
-<div class="image-container"> 
+<div data-aos="fade-left"  data-aos-duration="1500"  class="image-container"> 
     <img class="right_img" src="img/rightImg.png" alt="">
   <div class="right_overlay-svg">
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="916" viewBox="0 0 430 916" fill="none">
@@ -108,34 +109,187 @@
 </div>
 </div>
 </div>
-</section>
+  </section>
 <section id="section-aboutus">
 <div class="aboutus-wrap">
   <div class="aboutus-discription">
     <h1 class="aboutus-discription__title">Professional for your home services</h1>
     <p >You need help for home care? We are home care professionals focused in the US region. We provide several services that support home services</p>
   <div class="aboutus-discription__skills">
-    <div class="aboutus-discription__skills__skill">Repair and Installation</div>
-    <div class="aboutus-discription__skills__skill">Plumbing</div>
-    <div class="aboutus-discription__skills__skill">Maintenance</div>
-    <div class="aboutus-discription__skills__skill">Budget-friendly</div>
-    <div class="aboutus-discription__skills__skill">Home Security Services</div>
-    <div class="aboutus-discription__skills__skill">Eco-friendly solutions</div>
+    <div data-aos="fade-right"  data-aos-duration="1500"  class="aboutus-discription__skills__skill">Repair and Installation</div>
+    <div data-aos="fade-right"  data-aos-duration="1500"  class="aboutus-discription__skills__skill">Plumbing</div>
+    <div data-aos="fade-right"  data-aos-duration="1500"  class="aboutus-discription__skills__skill">Maintenance</div>
+    <div data-aos="fade-right"  data-aos-duration="1500"  class="aboutus-discription__skills__skill">Budget-friendly</div>
+    <div data-aos="fade-right"  data-aos-duration="1500"  class="aboutus-discription__skills__skill">Home Security Services</div>
+    <div data-aos="fade-right"  data-aos-duration="1500"  class="aboutus-discription__skills__skill">Eco-friendly solutions</div>
   </div>
-  <div class="aboutus-discription__conteiner">
+  <div data-aos="fade-up"  data-aos-duration="1500" class="aboutus-discription__conteiner">
    We already 24 hours fast services to help you. You can contact us at  <a class="aboutus-discription__conteiner__namber" href="tel:+380977149897"><u><b>(888)617-5894</b></u></a>
   </div>
   </div>
 
   <div class="aboutus__conteiner"><img src="img/menInRuf.webp" srcset="img/menInRuf-x2.webp 2x"loading="lazy" alt="men on ruf" class="aboutus__conteiner__img">
 </div>
+</section>
+<section id="section-ourservice">
+  <div class="our-services-wrap">
+<h1 class="our-services_title">Our Services</h1>
+<p class="our-services_description">You have problems with leaking pipes, broken tiles, lost keys or want to tidy up the trees around you, of course you need our help!</p>
+<div class="our-services_skils">
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic-Plumbing-Filled.svg" alt="icon">
+    </div>
+<h1 class="our-services_skils_title">Plumbing services</h1>
+<p class="our-services_skils_description">Drain pipe leaking, pipe clogged, replace the pipe line</p>
+  </article>
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic_Roof_Filled.svg" alt="Roof">
+    </div>
+<h1 class="our-services_skils_title">Roofing repair</h1>
+<p class="our-services_skils_description">Roof leaks, tile replacement, roof cleaning and maintenance</p>
+  </article>
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic_Wall-Filled.svg" alt="wall">
+    </div>
+<h1 class="our-services_skils_title">Mold Removal</h1>
+<p class="our-services_skils_description">Removing and cleaning mildew, Restoration and Prevention</p>
+  </article>
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic_Wood-Tree-Filled.svg" alt="Wood">
+    </div>
+<h1 class="our-services_skils_title">Tree Trimming</h1>
+<p class="our-services_skils_description">Trimming and cleaning, Deadwood removal, Tree shaping</p>
+  </article>
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic_Repair_Filled.svg" alt="repair">
+    </div>
+<h1 class="our-services_skils_title">Appliance Repair</h1>
+<p class="our-services_skils_description">repair of washing machines, refrigerators, Air conditioner, etc</p>
+  </article>
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic_Bathroom-Filled.svg" alt="bathroom">
+    </div>
+<h1 class="our-services_skils_title">Bathroom Remodeling</h1>
+<p class="our-services_skils_description">Design and Consulting, installation, Repairing, tile repair</p>
+  </article>
+  <article class="our-services_skils_skil">
+    <div class="our-services_skils_img">
+      <img src="svg/Ic_Door-Filled.svg" alt="door">
+    </div>
+<h1 class="our-services_skils_title">Locksmith</h1>
+<p class="our-services_skils_description">Lock Installation and Repair, Duplication, Lock Rekeying</p>
+  </article>
+</article>
+<article data-aos="flip-left"data-aos-duration="2000" class="our-services_skils_skil our-button">
+<h1 class="our-services_skils_title-button">More service?</h1>
+<p class="our-services_skils_description-button">You can tell us what you need and we can help! </p>
+<div class="call-us-now">
+  <a href="tel:+380977149897" class="call-us-now_ref "> Call Us Now</a>
+</div>
+</article>
+</div>
+  </div>
+  <div class="advantages">
+  <div class="advantages-conteiner">
+    <div class="left-svg"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="645" viewBox="0 0 45 645" fill="none">
+      <path d="M8.74234e-08 645L39.1254 599.92C42.914 595.555 45 589.969 45 584.189L45 60.8113C45 55.0312 42.914 49.4453 39.1253 45.0801L-2.81938e-05 0L8.74234e-08 645Z" fill="white"/>
+    </svg></div>
+    <div class="right-svg"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="645" viewBox="0 0 45 645" fill="none">
+      <path d="M45 645L5.87463 599.92C2.086 595.555 1.76643e-05 589.969 1.79169e-05 584.189L4.07945e-05 60.8113C4.10471e-05 55.0312 2.08602 49.4453 5.87465 45.0801L45 0L45 645Z" fill="white"/>
+    </svg></div>
+  <div class="advantages-text">
+    <div class="advantafes-text_title"><h3>Fast, Friendly, and Satisfaction Guarantee</h3></div>
+  <div class=""><p>No matter how big or small your work is, whether it's for the interior or exterior of your home, we are ready to serve and help you solve your home problems.</p></div>
+</div>
+  <div class="advantages__items">
+    <div data-aos="fade-right"  data-aos-duration="1500" class="advantages__items__item">
+      <div class="advantages-item__icon">
+        <img src="svg/Ic_Guarantee-Filled.svg" alt="molot">
+      </div>
+      <div class="advantages-item__title">
+      <div class="advantages-item__text">Satisfaction Guarantee</div>
+        <p>
+          you don't need to worry about scams or our performance results. our company has been verified and strives for optimal results
+        </p>
+      </div>
+    </div>
+ 
+    <div data-aos="fade-left"  data-aos-duration="1500" class="advantages__items__item">
+      <div class="advantages-item__icon">
+        <img src="svg/Ic_Quotes-Filled.svg" alt="note">
+      </div>
+      <div class="advantages-item__title">
+     
+      <div class="advantages-item__text"> Free Quotes </div>
+        <p>
+          Get personalized cost estimates without any obligation. Experience transparency and peace of mind as you explore our service.
+        </p>
+     
+    </div>
+    </div>
+    <div data-aos="fade-right"  data-aos-duration="1500" class="advantages__items__item">
+      <div class="advantages-item__icon">
+        <img src="svg/Ic_Local-Filled.svg" alt="local">
+      </div>
+      <div class="advantages-item__title">
+      <div class="advantages-item__text">Local Professionals</div>
+        <p>
+          Our services cover the Nationwide, US area, including urban, suburban, and rural locations for both long and short term maintenance 
+        </p>
+      </div>
+  </div>
+    <div data-aos="fade-left"  data-aos-duration="1500" class="advantages__items__item">
+      <div class="advantages-item__icon">
+        <img class="ik" src="svg/Ic_24H-Filled.svg" alt="24h">
+      </div>
+      <div class="advantages-item__title">
+        <div class="advantages-item__text">Fast 24-Hour Service</div>
+        <p>
+          need fast handling for repairs to drains, leaks or something else? Our experts are available anytime to help you solve the problem
+        </p>
+    </div>
+  </div>
+    <div data-aos="fade-right"  data-aos-duration="1500"class="advantages__items__item">
+      <div class="advantages-item__icon">
+        <img src="svg/Ic_Calendar-Filled.svg" alt="calendar">
+      </div>
+      <div class="advantages-item__title">
+      <div class="advantages-item__text">Flexible Appointments</div>
+        <p>
+          We offer convenient appointment times that can accommodate your busy schedule, day or night, 7 days a week.
+        </p>
+     
+    </div>
+  </div>
+    <div data-aos="fade-left"  data-aos-duration="1500" class="advantages__items__item">
+      <div class="advantages-item__icon">
+        <img src="svg/Ic_Commitment-Filled.svg" alt="COmmitment">
+      </div>
+      <div class="advantages-item__title">
+      <div class="advantages-item__text">100% Commitment-Free</div>
+        <p>
+          You are free to ask us about the problems you are facing. We offer a no-commitment approach to put your mind at ease
+        </p>
+      </div>
+   
+  </div>
+  </div>
+ </div>
+</div>
+</section>
  
 
-</section>
+
 </main>
-    <script src="main.js"></script>
-
-
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="main.js"></script>
 
 </body>
 
