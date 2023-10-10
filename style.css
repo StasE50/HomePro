@@ -606,6 +606,77 @@ line-height: 32px ;
 display: flex;
 gap: clamp(5px,1vw,32px);
 }
+/* end blok advantager services*/
+.how-works-wrap{
+  padding-top: clamp(60px,10% ,184px );
+  gap: clamp(24px,5% ,88px );
+align-items: start;
+}
+.man-works{
+}
+.works-man-img{
+  object-fit: cover;
+ width:100%;
+}
+.how-works__content{
+max-width: 700px;
+text-align: start;
+}
+.how-works__title{
+  font-size: clamp(24px,4vw,52px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;  
+  color: #171921;
+}ol{
+  list-style: none; /* Убираем стандартную нумерацию */
+  counter-reset:count;
+  padding: 0; /* Убираем внутренние отступы списка */
+  
+}
+.list-how__number{
+  position: relative; /* Позиционируем элементы списка относительно их собственного контейнера */
+  padding-left: 20px; /* Добавляем левый отступ для текста */
+  line-height: 2; /* Высота строки, чтобы цифра была посередине */
+  counter-increment: count; 
+  display: flex;
+  margin-bottom: clamp(10px,5vw ,52px );
+   gap: clamp(10px,5% ,36px );
+}
+.list-how__number::before{
+  content: counter(count)"."; /* Вставляем номер элемента */
+  position: absolute; /* Позиционируем цифру абсолютно */
+  left: -33px;
+    top: 21%;/* Перемещаем цифру на середину вертикально */
+  transform: translateY(-50%); /* Корректируем положение цифры по вертикали */
+  color: var(--neutural-grey-3, #9EA3B5);
+font-size: 52px;
+font-style: normal;
+font-weight: 700;
+line-height: 64px; /* 123.077% */
+}
+.list-how__title{
+  color: var(--neutural-black, #171921);
+  font-feature-settings: 'liga' off;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  max-width: 164px; ;
+}
+.list-how__text{
+max-width: 420px;
+}
+.list-how__item{
+text-align: start;
+
+}
+.list-how__number {
+ 
+}
+
+/* Стили для каждого элемента списка (li) */
+
 @media (max-width:1716px) {
   .left_image{
     width: 350px;
@@ -712,7 +783,16 @@ text-align: center;
   .advantages-text{
     align-items: center;
   }
-
+  .list-how__number::before{
+    left: -57px;
+    top: 27%;
+  }
+  .list-how__number {
+    padding-left: 20px; 
+  }
+  .how-works-wrap{
+   align-items: center;
+  }
   }
   @media (max-width:1129px) {
     .left_image{
@@ -784,6 +864,7 @@ text-align: center;
 .aboutus__conteiner__img{
   max-width: 412px;
 }
+
     }
 @media (max-width:780px){
   .header__burger-btn{
@@ -863,7 +944,17 @@ width: 50%;
 .aboutus-discription__conteiner{
   padding: 12px 24px;
 }
-
+.list-how__number{
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.list-how__title{
+  max-width:  100%;
+}
+.list-how__number::before {
+  left: -36px;
+}
 }
 @media (max-width:749px){
   .advantages-text{
@@ -904,6 +995,10 @@ height: 60px;
   gap: 15px;  
   flex-direction: column;
   text-align: center;
+}
+.list-how__number::before {
+  left: -12px;
+  top: 15%;
 }
 }
 
@@ -981,6 +1076,12 @@ height: 16px;
   }
   .our-services_skils_skil {
     text-align: center;
+}
+}
+@media (max-width:366px){
+  .list-how__number::before {
+   display: none;
+ 
 }
 }
 @media (max-width:338px){
