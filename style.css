@@ -647,7 +647,7 @@ text-align: start;
   content: counter(count)"."; /* Вставляем номер элемента */
   position: absolute; /* Позиционируем цифру абсолютно */
   left: -33px;
-    top: 21%;/* Перемещаем цифру на середину вертикально */
+    top: 26%;/* Перемещаем цифру на середину вертикально */
   transform: translateY(-50%); /* Корректируем положение цифры по вертикали */
   color: var(--neutural-grey-3, #9EA3B5);
 font-size: 52px;
@@ -669,14 +669,122 @@ max-width: 420px;
 }
 .list-how__item{
 text-align: start;
-
-}
-.list-how__number {
- 
 }
 
-/* Стили для каждого элемента списка (li) */
 
+/* end blok how-works services*/
+
+.reviews-wrap{
+  max-width: 1178px;
+margin: clamp(64px,15%,290px)auto clamp(80px,15%,216px) auto;
+padding: 0 24px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
+gap: clamp(30px,7vw,50px);
+}
+.reviews__title{
+  font-size: clamp(24px,8vw,52px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  max-width: 650px;
+  color: #171921;
+}
+.reviews-slider__conteiner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ width: 100%;
+}
+
+.reviews__button{
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px 0 0;
+background: var(--primary-sky-blue, #15B2F5);
+}
+.reviews__button svg{
+  transform: translateX(2px);
+}
+.reviews__button:active{
+  background: var(--neutural-soft-grey, #E3E6F0);
+}
+
+.reviews-user__img{
+  border-radius: 76px;
+  
+}
+.reviews-user-conteiner{
+  display: inline-flex;
+  gap: clamp(16px,3vw,32px);
+  padding-top: clamp(24px,5vw,40px );
+}
+.reviws-user__rating__name-container{
+  text-align: start;
+}
+.reviws-user__name{
+  color: var(--neutural-black, #171921);
+font-feature-settings: 'liga' off;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
+}
+.slider-wrap{
+ max-width:720px;
+  overflow: hidden;
+
+}
+.reviews-sliders{
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: 0.6s ease;
+  align-items: center;
+  max-width: 720px; 
+  font-size: 20px;
+}
+.reviews-slider {
+min-width: 100%;
+}
+.reviws-user-rating{
+  display: flex;
+}
+.dot:hover{
+  background-color: #15B2F5;
+}
+.dot:active{
+  background-color: #15B2F5;
+}
+.dots{
+  display: inline-flex;
+  gap:  12px;
+  margin: 0 auto;
+
+}
+.dot{
+width: 12px;
+height: 12px;
+background-color:#E3E6F0 ;
+border-radius: 100%;
+}
+.active2{
+  background-color: #15B2F5;
+  width: 40px;
+  height: 12px;
+  border-radius: 24px;
+}
 @media (max-width:1716px) {
   .left_image{
     width: 350px;
@@ -728,6 +836,7 @@ text-align: start;
 .improv_title {
   font-size: 44px;
 }
+
   }
   @media (max-width:1479px) {
 
@@ -864,7 +973,12 @@ text-align: center;
 .aboutus__conteiner__img{
   max-width: 412px;
 }
-
+.reviews__button {
+  display: none;
+}
+.reviews-slider__conteiner{
+  justify-content: center;
+}
     }
 @media (max-width:780px){
   .header__burger-btn{
@@ -951,9 +1065,14 @@ width: 50%;
 }
 .list-how__title{
   max-width:  100%;
+  
 }
 .list-how__number::before {
   left: -36px;
+  
+}
+.how-works__title{
+  text-align: center;
 }
 }
 @media (max-width:749px){
@@ -969,6 +1088,7 @@ width: 50%;
   .aboutus-discription__skills>div:nth-child(odd){
     padding-left:10px
   }
+
 }
 @media (max-width:505px){
   .aboutus-discription__skills{
@@ -1077,12 +1197,33 @@ height: 16px;
   .our-services_skils_skil {
     text-align: center;
 }
+.reviews__logo{
+  width: 133px;
+  }
+  .reviews-sliders{
+    justify-content:start;
+    align-items:start
+  }
+  .rating__item svg{
+    width: 24px;
+height: 24px;
+
+  }
+  .reviews-user__img{
+    width: 52px;
+height: 52px;
+object-fit: cover;
+  }
+  .reviews-user-conteiner-img{
+padding-top : 5px;;
+  }
 }
 @media (max-width:366px){
   .list-how__number::before {
    display: none;
  
 }
+  
 }
 @media (max-width:338px){
  

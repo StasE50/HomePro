@@ -39,7 +39,62 @@ function hideElementOnResize() {
     element.style.display = 'block';
   } 
 }
-hideElementOnResize();
+//sider
+const sliderContainer = document.querySelector('.reviews-sliders');
+ const slider = document.querySelectorAll('.reviews-slider');
+const prevButton=document.getElementById('button-prev');
+const nextButton=document.getElementById('button-next');
+let position=0,
+dotIndex=0;
+let ind=slider.length-1;
+nextButton.addEventListener("click",nextSlide=()=>{
+  const slider = document.querySelectorAll('.reviews-slider');
+  if(position>=slider[0].offsetWidth*ind){
+    position=0;
+    dotIndex=0;
+     }
+     else{
+        position+=slider[0].offsetWidth;
+        dotIndex++;
+     }
+  sliderContainer.style.left=-position + 'px';
+  thisSlide(dotIndex);
+});
+
+prevButton.addEventListener("click", prevSlide=()=>{
+const slider = document.querySelectorAll('.reviews-slider');
+  if(position>0){
+  position-=slider[0].offsetWidth; 
+  dotIndex--;
+  }else{
+    position=slider[0].offsetWidth*ind;
+    dotIndex=ind;
+  }
+sliderContainer.style.left=-position + 'px' ;
+thisSlide(dotIndex);
+})
+
+sliderContainer.addEventListener('touchstart', (e) => {
+  const touchStartX = e.touches[0].clientX;})
+
+const dots=document.querySelectorAll('.dot');
+const thisSlide=(index)=>{
+for(let dot of dots){
+dot.classList.remove('active2');
+} 
+dots[index].classList.add('active2');
+}
+dots.forEach((dot,index)=>{
+  dot.addEventListener('click',()=>{
+    const slider = document.querySelectorAll('.reviews-slider');
+position=slider[0].offsetWidth*index;
+sliderContainer.style.left=-position + 'px' ;
+dotIndex=index;  
+thisSlide(index);
+  });
+});
+//sider end
+
 // Добавляем обработчик события изменения размера окна браузера
 window.addEventListener("resize", hideElementOnResize);
 // Обработчик события клика на кресте
@@ -49,4 +104,6 @@ document.querySelector(".call_btn").addEventListener("click", function() {
 document.querySelector(".call-us-now").addEventListener("click", function() {
   window.location.href = "tel:+380977149897";
 });
+hideElementOnResize();
 AOS.init();
+
