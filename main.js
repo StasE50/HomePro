@@ -47,7 +47,7 @@ const nextButton=document.getElementById('button-next');
 let position=0,
 dotIndex=0;
 let ind=slider.length-1;
-nextButton.addEventListener("click",nextSlide=()=>{
+const nextSlide=()=>{
   const slider = document.querySelectorAll('.reviews-slider');
   if(position>=slider[0].offsetWidth*ind){
     position=0;
@@ -59,23 +59,21 @@ nextButton.addEventListener("click",nextSlide=()=>{
      }
   sliderContainer.style.left=-position + 'px';
   thisSlide(dotIndex);
-});
-
-prevButton.addEventListener("click", prevSlide=()=>{
-const slider = document.querySelectorAll('.reviews-slider');
-  if(position>0){
-  position-=slider[0].offsetWidth; 
-  dotIndex--;
-  }else{
-    position=slider[0].offsetWidth*ind;
-    dotIndex=ind;
+}
+nextButton.addEventListener("click",nextSlide);
+ function prevSlide(){
+  const slider = document.querySelectorAll('.reviews-slider');
+    if(position>0){
+    position-=slider[0].offsetWidth; 
+    dotIndex--;
+    }else{
+      position=slider[0].offsetWidth*ind;
+      dotIndex=ind;
+    }
+  sliderContainer.style.left=-position + 'px' ;
+  thisSlide(dotIndex);
   }
-sliderContainer.style.left=-position + 'px' ;
-thisSlide(dotIndex);
-})
-
-sliderContainer.addEventListener('touchstart', (e) => {
-  const touchStartX = e.touches[0].clientX;})
+prevButton.addEventListener("click",prevSlide )
 
 const dots=document.querySelectorAll('.dot');
 const thisSlide=(index)=>{
@@ -94,7 +92,46 @@ thisSlide(index);
   });
 });
 //sider end
+const sliderWrap=document.querySelector('.slider-wrap')
+sliderWrap.addEventListener('touchstart',handleTouchStar,false);
+sliderWrap.addEventListener('touchmove',handleTouchMove,false);
+let x1=null;
+let y1=null;
+function handleTouchStar(event){
+x1=event.touches[0].clientX;
+y1=event.touches[0].clientY;
 
+}
+function handleTouchMove(event){
+  if (!x1||!y1){
+return false;
+  }
+  let x2 = event.touches[0].clientX;
+  let y2 = event.touches[0].clientY;
+  let xDiff=x2-x1;
+  let yDiff=y2-y1;
+  if(Math.abs(xDiff)>Math.abs(yDiff)){
+if(xDiff>0){
+ //move right
+  prevSlide();
+
+}
+else
+{
+  // move left
+  nextSlide();
+}
+  }
+  x1=null;
+  y1=null;
+}
+//swiper
+
+
+
+
+
+//end swiper
 // Добавляем обработчик события изменения размера окна браузера
 window.addEventListener("resize", hideElementOnResize);
 // Обработчик события клика на кресте
