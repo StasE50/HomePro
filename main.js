@@ -92,6 +92,7 @@ thisSlide(index);
   });
 });
 //sider end
+//swiper
 const sliderWrap=document.querySelector('.slider-wrap')
 sliderWrap.addEventListener('touchstart',handleTouchStar,false);
 sliderWrap.addEventListener('touchmove',handleTouchMove,false);
@@ -125,13 +126,66 @@ else
   x1=null;
   y1=null;
 }
-//swiper
-
-
-
-
-
 //end swiper
+//star uploading from js file
+let startItem=0;
+let data;
+let endItem=3;
+async function loadBlogItems(){
+  let response = await fetch("blog.json",{
+    method: "GET"
+  });
+  if(response.ok){
+const responseResult=await response.json();
+data=responseResult;
+initBlog(data,startItem,endItem)
+  }
+  else{
+    alert("errro");
+  }
+} 
+let  indexstan=3;
+function initBlog(data,startItem,endItem){
+   
+  const dataPart=data.items.slice(startItem,endItem);
+  dataPart.forEach(item=>{buildBlog(item);}) ;
+
+
+}
+const blogItems= document.querySelector('.blog__items');
+function buildBlog(item){
+ let blogItem=``;
+ blogItem+=`<article class="blog__item">`;
+ blogItem+=`<div class="item-blog__image">
+ <img src="${item.image}" alt="imge-article">
+</div>`;
+ blogItem+=`<div class="item-blog__date">${item.date}</div>`;
+ blogItem+=`<h4 class="item-blog__title">${item.title}</h4>`;
+ blogItem+=`<div class="item-blog__text">
+ <p>${item.text}</p>
+ </div>`;
+ if(item.tags){
+  blogItem+=`<div class="item-blog__tags">`;
+  for (const tag in item.tags) {
+    blogItem+=` <a href="${item.tags[tag]}">${tag}</a>`;
+  }
+  blogItem+=`</div>`;
+ }
+ blogItem+=`</article>`;
+ blogItems.insertAdjacentHTML('beforeend',blogItem);
+}
+ loadBlogItems();
+document.addEventListener('click',(e)=>{
+  const targetElement=e.target;
+  if(targetElement.closest('.blog__button')){
+startItem=document.querySelectorAll('.blog__item').length;
+endItem=startItem+3;
+initBlog(data,startItem,endItem)  ;
+e.preventDefault();
+}
+   
+});
+//end uploading from js file
 // Добавляем обработчик события изменения размера окна браузера
 window.addEventListener("resize", hideElementOnResize);
 // Обработчик события клика на кресте
@@ -141,6 +195,7 @@ document.querySelector(".call_btn").addEventListener("click", function() {
 document.querySelector(".call-us-now").addEventListener("click", function() {
   window.location.href = "tel:+380977149897";
 });
+setInterval(nextSlide, 5000); 
 hideElementOnResize();
 AOS.init();
 
