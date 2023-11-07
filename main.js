@@ -157,7 +157,7 @@ function buildBlog(item){
  let blogItem=``;
  blogItem+=`<article class="blog__item">`;
  blogItem+=`<div class="item-blog__image">
- <img src="${item.image}" alt="imge-article">
+ <img src="${item.image}" alt="imge-article loading="lazy"">
 </div>`;
  blogItem+=`<div class="item-blog__date">${item.date}</div>`;
  blogItem+=`<h4 class="item-blog__title">${item.title}</h4>`;
@@ -186,6 +186,27 @@ e.preventDefault();
    
 });
 //end uploading from js file
+//accordion
+const accordinoElement =document.querySelectorAll('.question__item');
+
+function ActiveAccordion() {
+  const panel = this.querySelector('.questions-accordion__text');
+  this.classList.toggle("active3");
+  if (panel.style.maxHeight){
+    panel.style.maxHeight = null;
+
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    
+  } 
+}
+
+for (const element of accordinoElement) {
+  element.addEventListener("click",ActiveAccordion);
+  
+}
+
+// end accordion
 // Добавляем обработчик события изменения размера окна браузера
 window.addEventListener("resize", hideElementOnResize);
 // Обработчик события клика на кресте

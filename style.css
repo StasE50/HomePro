@@ -880,8 +880,92 @@ line-height: 20px;
   transform: scale(1.1);
   transition: all 0.5s;
 }
-
 /* end section out blog */
+/* start section questions */
+.questoins-wrap{
+  display: flex;
+ margin: 0 auto;
+ padding-left: 20px;
+ padding-right: 20px;
+ gap: clamp(56px,5% ,139px );
+ align-items:  start;
+ justify-content: space-between;
+ padding-bottom: clamp(56px,15% ,230px );
+ padding-top: clamp(80px,18% ,308px );
+ max-width: 1440px;
+}
+.question__items{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 725px;
+  width: 100%;
+}
+.questions__content{
+  max-width: 469px;
+  width: 100%;
+}
+.questions__title{
+  color: var(--neutural-black, #171921);
+  font-size: clamp(32px,4vw,52px);
+font-style: normal;
+font-weight: 700;
+line-height: 64px
+}
+.questions__text {
+  font-size: 20px;
+}
+.questions__text a{
+  color: var(--primary-sky-blue, #15B2F5);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; 
+  text-decoration-line: underline;
+  white-space: nowrap;
+}
+.questions__text a:hover{
+  opacity: 0.5;
+}
+.question__item{
+  color: var(--neutural-grey-1, #545971);
+  font-feature-settings: 'liga' off;
+  font-size: clamp(18px,3vw ,24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+.questions-accordion__text{
+  color: #737373;
+font-feature-settings: 'ss01' on;
+font-family: Be Vietnam;
+font-size: 18px;
+font-style: normal;
+padding-top: 16px;
+font-weight: 500;
+line-height:  150%;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.4s ease-out;
+}
+.question__item::after{
+  content:url('svg/IC_chevron-down.svg');
+  position: absolute;
+  right: 0;
+  top: 0;
+padding-left: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+.active3::after{
+  content:url('svg/IC_chevron-down1.svg');
+}
+
+/* end section queestins*/
 @media (max-width:1716px) {
   .left_image{
     width: 350px;
@@ -1175,6 +1259,11 @@ width: 50%;
 }
 .blog__items{
   grid-template-columns: repeat(1, minmax(327px, 448px));
+}
+.questoins-wrap{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 }
 @media (max-width:749px){
