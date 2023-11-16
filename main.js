@@ -37,13 +37,13 @@ let form =document.querySelector(".contact-connected__form");
 
 function updateInput() {
   if (validateEmail(emailInput.value))
-  { form.style.border='1px solid'
+  { form.style.border='2px solid'
     form.style.borderColor = 'green';
 
 }
   else 
   {
-    form.style.border='1px solid'
+    form.style.border='2px solid'
   form.style.borderColor = 'red';
   
 }
