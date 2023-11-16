@@ -31,15 +31,41 @@ links.forEach(function (link) {
 });
 var element = document.querySelector(".logo1");
 // Функция, которая будет проверять ширину экрана и скрывать элемент при необходимости
+//функиция для появления бордера у вормы 
+let emailInput = document.querySelector(".imput__email");
+let form =document.querySelector(".contact-connected__form");
+
+function updateInput() {
+  if (validateEmail(emailInput.value))
+  { form.style.border='1px solid'
+    form.style.borderColor = 'green';
+
+}
+  else 
+  {
+    form.style.border='1px solid'
+  form.style.borderColor = 'red';
+  
+}
+}
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+function validateEmail(value) {
+  return EMAIL_REGEXP.test(value);
+}
+emailInput.addEventListener('input',updateInput);
+//функиция для появления бордера у вормы +валидация 
 function hideElementOnResize() {
   if (window.innerWidth > 780) {
     // Если ширина экрана менее или равна 780 пикселей
     element.style.display = "none";
+    emailInput.placeholder = 'Enter email address';
   } else {
     element.style.display = "block";
+    emailInput.placeholder = 'Email address';
   }
 }
 //sider
+
 const sliderContainer = document.querySelector(".reviews-sliders");
 const slider = document.querySelectorAll(".reviews-slider");
 const prevButton = document.getElementById("button-prev");
@@ -180,7 +206,6 @@ document.addEventListener("click", (e) => {
 //end uploading from js file
 //accordion
 const accordinoElement = document.querySelectorAll(".question__item");
-
 function ActiveAccordion() {
   const panel = this.querySelector(".questions-accordion__text");
   this.classList.toggle("active3");
@@ -190,6 +215,7 @@ function ActiveAccordion() {
     panel.style.maxHeight = panel.scrollHeight + "px";
   }
 }
+
 
 for (const element of accordinoElement) {
   element.addEventListener("click", ActiveAccordion);

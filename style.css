@@ -1014,6 +1014,85 @@ align-items: end;
   margin: 0;
 }
 /* end section already-improve*/
+/* start footer */
+#contact{
+  background-color: #15B2F5;
+}
+.footer-conteiner{
+  max-width: 1490px;
+  padding: clamp(36px,6vw,52px) 10px 0 10px;
+margin: 0 auto;
+}
+.contact-connected-conteiner{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  gap: 20px;
+  background-color: #4AC9FF;
+  border-radius: 24px;
+  align-items: center;
+}
+.contact-connected__text{
+  color: #FFF;
+  flex: 1;
+}
+.contact-connected__title{
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
+padding-bottom: 12px;
+}
+.contact-connected__form{
+  max-width: 516px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+border-radius: 60px;
+background-color: #FFF;
+padding: 10px;
+gap: 7px;
+}
+input[type="email"]::placeholder{
+    color: #9EA3B5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px
+}
+.imput__email{
+ all: initial; 
+ font-family: "Plus Jakarta Sans", sans-serif;
+ color: #9EA3B5;
+  border: none;
+  width: 100%;
+  padding-left: 8px;
+}
+.contact-connected__button{
+  all: initial;
+  max-width: clamp(112px,18vw,161px);
+  width: 100%;
+  height: 52px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+  border-radius: 60px;
+background: var(--primary-sky-blue, #15B2F5);
+}
+.contact-connected__button span{
+ color: var(--neutural-white, #FFF);
+text-align: center;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+font-family: "Plus Jakarta Sans", sans-serif;
+}
+/* end footer*/
 @media(min-width:2000px){
   .already-conteiner{
     justify-content: space-around;
@@ -1338,6 +1417,9 @@ align-items: end;
     align-items: center;
     text-align: center;
   }
+.imput__email::placeholder{
+    content:"email address";
+  }
 }
 @media (max-width: 749px) {
   .advantages-text {
@@ -1351,6 +1433,20 @@ align-items: end;
   }
   .aboutus-discription__skills > div:nth-child(odd) {
     padding-left: 10px;
+  }
+  
+.contact-connected__button{
+  height: 42px;
+}
+.contact-connected__button span{
+  font-size: 16px;
+font-style: normal;
+font-weight: 700;
+}
+}
+@media (max-width: 622px) {
+  .contact-connected-conteiner{
+    flex-direction: column;
   }
 }
 @media (max-width: 505px) {
