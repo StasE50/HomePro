@@ -845,17 +845,19 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: 125%;
-  padding: clamp(16px, 4vw, 24px) 0;
+  padding: clamp(16px, 4vw, 24px) 0 ;
 }
 .item-blog__text {
   max-width: 100%; /* Можете установить другое значение */
   max-height: 84px;
   overflow: hidden;
+  
   margin-bottom: clamp(16px, 4vw, 24px);
 }
 .item-blog__tags {
   display: flex;
   gap: 12px;
+text-align: end;
   flex-wrap: wrap;
 }
 .item-blog__tags a {
@@ -878,6 +880,7 @@ ol {
   transform: scale(1.1);
   transition: all 0.5s;
 }
+
 /* end section out blog */
 /* start section questions */
 .questoins-wrap {
@@ -1149,7 +1152,8 @@ color: var(--neutural-white, #FFF);
  max-height: 92px;
  height:  clamp(60px,9vw,92px);
 }
-
+.man{
+  padding-bottom: clamp(24px,7vw,60px);}
 
 /* end footer*/
 @media(min-width:2000px){
@@ -1468,6 +1472,7 @@ color: var(--neutural-white, #FFF);
   .how-works__title {
     text-align: center;
   }
+  
   .blog__items {
     grid-template-columns: repeat(1, minmax(310px, 448px));
   }
