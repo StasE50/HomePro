@@ -1469,7 +1469,7 @@ color: var(--neutural-white, #FFF);
     text-align: center;
   }
   .blog__items {
-    grid-template-columns: repeat(1, minmax(327px, 448px));
+    grid-template-columns: repeat(1, minmax(310px, 448px));
   }
   .questoins-wrap {
     flex-direction: column;
